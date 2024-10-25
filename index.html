@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Verificação de Senha</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+      }
+      input,
+      button {
+        font-family: "Arial", sans-serif;
+        display: block;
+        margin: 10px auto;
+      }
+      .erro {
+        color: red;
+      }
+      .sucesso {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Verificação de Senha</h1>
+      <input type="text" id="password" placeholder="Digite a senha" />
+      <button onclick="verificarSenha()">Verificar</button>
+      <p id="resultado"></p>
+      <p id="tentativas">Você tem 3 tentativas</p>
+    </div>
+
+    <script>
+      let tentativasRestantes = 3;
+
+      function verificarSenha() {
+        const senhaCorreta = "62 13 40 52";
+        const senhaInserida = document.getElementById("password").value;
+
+        if (senhaInserida === senhaCorreta) {
+          document.body.innerHTML = "<h1 class='sucesso'>Parabéns!</h1>";
+        } else {
+          tentativasRestantes--;
+          if (tentativasRestantes > 0) {
+            document.getElementById("resultado").textContent = "Senha errada!";
+            document.getElementById("resultado").classList.add("erro");
+            document.getElementById(
+              "tentativas"
+            ).textContent = `Você tem ${tentativasRestantes} tentativas`;
+          } else {
+            document.body.innerHTML = "<h1 class='erro'>Você perdeu</h1>";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
