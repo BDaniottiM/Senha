@@ -2,63 +2,34 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verificação de Senha</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: black;
-        color: white;
-        font-family: "Arial", sans-serif;
-        text-align: center;
-      }
-      input,
-      button {
-        font-family: "Arial", sans-serif;
-        display: block;
-        margin: 10px auto;
-      }
-      .erro {
-        color: red;
-      }
-      .sucesso {
-        color: green;
-      }
-    </style>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <div>
-      <h1>Verificação de Senha</h1>
-      <input type="text" id="password" placeholder="Digite a senha" />
-      <button onclick="verificarSenha()">Verificar</button>
-      <p id="resultado"></p>
-      <p id="tentativas">Você tem 3 tentativas</p>
+    <div class="container">
+      <!-- Inputs na mesma linha -->
+      <div class="inputs-container">
+        <input type="text" id="numero1" maxlength="2" aria-label="Número 1" />
+        <input type="text" id="numero2" maxlength="2" aria-label="Número 2" />
+        <input type="text" id="numero3" maxlength="2" aria-label="Número 3" />
+        <input type="text" id="numero4" maxlength="2" aria-label="Número 4" />
+      </div>
+
+      <!-- Botões abaixo dos inputs -->
+      <div class="buttons-container">
+        <button onclick="verificarParte1()" id="button1">OK</button>
+        <button onclick="verificarParte2()" id="button2">OK</button>
+      </div>
+
+      <div class="tentativas-container">
+        <p class="tentativas" id="tentativasParte1">3 Tentativas restantes</p>
+        <p class="tentativas" id="tentativasParte2">3 Tentativas restantes</p>
+      </div>
     </div>
 
-    <script>
-      let tentativasRestantes = 3;
+    <p id="resultado" style="text-align: center; margin-top: 10px"></p>
 
-      function verificarSenha() {
-        const senhaCorreta = "62 13 40 52";
-        const senhaInserida = document.getElementById("password").value;
-
-        if (senhaInserida === senhaCorreta) {
-          document.body.innerHTML = "<h1 class='sucesso'>Parabéns!</h1>";
-        } else {
-          tentativasRestantes--;
-          if (tentativasRestantes > 0) {
-            document.getElementById("resultado").textContent = "Senha errada!";
-            document.getElementById("resultado").classList.add("erro");
-            document.getElementById(
-              "tentativas"
-            ).textContent = `Você tem ${tentativasRestantes} tentativas`;
-          } else {
-            document.body.innerHTML = "<h1 class='erro'>Você perdeu</h1>";
-          }
-        }
-      }
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>

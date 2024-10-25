@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificação de Palavra</title>
+    <link rel="stylesheet" href="css/senha.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- Inputs para cada letra da palavra "presente" -->
+      <div class="inputs">
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra1"
+          aria-label="Letra 1"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra2"
+          aria-label="Letra 2"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra3"
+          aria-label="Letra 3"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra4"
+          aria-label="Letra 4"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra5"
+          aria-label="Letra 5"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra6"
+          aria-label="Letra 6"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra7"
+          aria-label="Letra 7"
+        />
+        <input
+          type="text"
+          maxlength="1"
+          class="letter-input"
+          id="letra8"
+          aria-label="Letra 8"
+        />
+      </div>
+
+      <!-- Botão de Verificação -->
+      <button onclick="verificarPalavra()" id="verificarBtn">OK</button>
+
+      <!-- Contador de Tentativas -->
+      <p id="tentativas">3 Tentativas restantes</p>
+
+      <!-- Mensagem de Resultado -->
+      <p id="resultado"></p>
+    </div>
+
+    <script src="js/senha.js"></script>
+  </body>
+</html>

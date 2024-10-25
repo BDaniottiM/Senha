@@ -1,0 +1,83 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* Centralização dos elementos */
+.container {
+  text-align: center;
+}
+
+/* Estilo dos inputs na mesma linha */
+.inputs-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Estilo dos inputs */
+input[type="text"] {
+  width: 60px;
+  padding: 8px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Estilo dos botões */
+.buttons-container {
+  margin-top: 15px;
+  display: flex;
+  gap: 130px;
+  justify-content: center;
+}
+
+.tentativas-container {
+  margin-top: 15px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* Estilo das tentativas */
+.tentativas {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Ocultar números nos inputs e placeholders */
+::-webkit-input-placeholder {
+  color: transparent;
+}
+
+:-ms-input-placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: transparent;
+}

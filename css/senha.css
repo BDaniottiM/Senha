@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  transition: background-color 0.5s; /* Animação para a troca de cor */
+}
+
+/* Container centralizado */
+.container {
+  text-align: center;
+}
+
+/* Estilo dos inputs */
+.inputs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.letter-input {
+  width: 40px;
+  padding: 8px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Estilo do botão */
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* Mensagem de resultado */
+#resultado {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* Contador de tentativas */
+#tentativas {
+  margin-top: 5px;
+  font-size: 16px;
+}
