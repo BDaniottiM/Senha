@@ -4,6 +4,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  background: url("https://media.discordapp.net/attachments/909157769721049130/1299780132608671875/Numpad1.png?ex=671e7214&is=671d2094&hm=0a66fc2551bdf3d81a76794c8fc0d1724349588bfc0c521a423d5c754f18982f&=&format=webp&quality=lossless&width=242&height=407")
+    no-repeat center center;
+  background-size: contain;
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;

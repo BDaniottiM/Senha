@@ -1,9 +1,10 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
+  background: url("https://cdn.discordapp.com/attachments/1221575374714966066/1299789594585206904/chrome_VhFED7rxTl.png?ex=671e7ae4&is=671d2964&hm=9a5e8294134ac51dc3b68707365145601201f7114c9f471c646d32027870741a&")
+    no-repeat center center;
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
@@ -13,6 +14,7 @@ body {
 
 /* Container centralizado */
 .container {
+  margin-top: 320px;
   text-align: center;
 }
 
@@ -37,7 +39,7 @@ body {
 /* Estilo do botão */
 button {
   padding: 10px 20px;
-  margin-top: 15px;
+  margin-top: 250px;
   margin-bottom: 15px;
   background-color: #555;
   color: white;
@@ -60,5 +62,6 @@ button:hover {
 /* Contador de tentativas */
 #tentativas {
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: bold;
 }

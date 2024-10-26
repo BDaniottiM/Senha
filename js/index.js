@@ -51,7 +51,8 @@ function verificarParte2() {
 
 function redirecionarSeCorreto() {
   if (parte1Correta && parte2Correta) {
-    window.location.href = "senha.html"; // Substitua pelo caminho da sua página
+    document.body.style.backgroundColor = "green";
+    document.body.innerHTML = ""; // Substitua pelo caminho da sua página
   }
 }
 
